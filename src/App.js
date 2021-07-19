@@ -23,6 +23,8 @@ import DataWithUseReducer from "./useReducer/data-fetching/DataWithUseReducer";
 import Main from "./useReducer/with-context/Main";
 import ParentComponent from "./useCallback/ParentComponent";
 import Counter from "./useMemo/Counter";
+import FocusInput from "./useRef/FocusInput";
+import HookTimer from "./useRef/HookTimer";
 
 function App() {
     return (
@@ -151,14 +153,17 @@ function App() {
                         component={ParentComponent}
                     />
 
-
                     {/* useMemo */}
+                    <Route exact path="/use-memo" component={Counter} />
+
+                    {/* useRef */}
                     <Route
                         exact
-                        path="/use-memo"
-                        component={Counter}
+                        path="/use-ref/focus-input"
+                        component={FocusInput}
                     />
 
+                    <Route exact path="/use-ref/timer" component={HookTimer} />
                 </Switch>
             </Router>
         </div>
