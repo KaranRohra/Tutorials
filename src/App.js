@@ -22,6 +22,7 @@ import DataWithUseState from "./useReducer/data-fetching/DataWithUseState";
 import DataWithUseReducer from "./useReducer/data-fetching/DataWithUseReducer";
 import Main from "./useReducer/with-context/Main";
 import ParentComponent from "./useCallback/ParentComponent";
+import Counter from "./useMemo/Counter";
 
 function App() {
     return (
@@ -149,6 +150,15 @@ function App() {
                         path="/use-callback"
                         component={ParentComponent}
                     />
+
+
+                    {/* useMemo */}
+                    <Route
+                        exact
+                        path="/use-memo"
+                        component={Counter}
+                    />
+
                 </Switch>
             </Router>
         </div>
