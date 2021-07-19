@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import BasicDatatypes from "./useState/BasicDatatypes";
@@ -14,6 +15,12 @@ import DataOnFirstRender from "./useEffect/data-fetching/DataOnFirstRender";
 import DataOnChange from "./useEffect/data-fetching/DataOnChange";
 import DataOnClick from "./useEffect/data-fetching/DataOnClick";
 import ComponentA from "./useContext/ComponentA";
+import BasicDatatypeR from "./useReducer/BasicDatatypeR";
+import ActionObject from "./useReducer/ActionObject";
+import DataObject from "./useReducer/DataObject";
+import DataWithUseState from "./useReducer/data-fetching/DataWithUseState";
+import DataWithUseReducer from "./useReducer/data-fetching/DataWithUseReducer";
+import Main from "./useReducer/with-context/Main";
 
 function App() {
     return (
@@ -95,10 +102,44 @@ function App() {
                     />
 
                     {/* useContext */}
+                    <Route exact path="/use-context" component={ComponentA} />
+
+                    {/* useReducer */}
                     <Route
                         exact
-                        path="/use-context"
-                        component={ComponentA}
+                        path="/use-reducer/basic-datatypes"
+                        component={BasicDatatypeR}
+                    />
+
+                    <Route
+                        exact
+                        path="/use-reducer/action-object"
+                        component={ActionObject}
+                    />
+
+                    <Route
+                        exact
+                        path="/use-reducer/data-object"
+                        component={DataObject}
+                    />
+                    {/* useReducer with useContext */}
+                    <Route
+                        exact
+                        path="/use-reducer/with-use-context"
+                        component={Main}
+                    />
+
+                    {/* useReducer DataFetching */}
+                    <Route
+                        exact
+                        path="/use-reducer/data-with-use-state"
+                        component={DataWithUseState}
+                    />
+
+                    <Route
+                        exact
+                        path="/use-reducer/data-with-use-reducer"
+                        component={DataWithUseReducer}
                     />
                 </Switch>
             </Router>
