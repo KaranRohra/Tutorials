@@ -21,6 +21,7 @@ import DataObject from "./useReducer/DataObject";
 import DataWithUseState from "./useReducer/data-fetching/DataWithUseState";
 import DataWithUseReducer from "./useReducer/data-fetching/DataWithUseReducer";
 import Main from "./useReducer/with-context/Main";
+import ParentComponent from "./useCallback/ParentComponent";
 
 function App() {
     return (
@@ -140,6 +141,13 @@ function App() {
                         exact
                         path="/use-reducer/data-with-use-reducer"
                         component={DataWithUseReducer}
+                    />
+
+                    {/* useCallback */}
+                    <Route
+                        exact
+                        path="/use-callback"
+                        component={ParentComponent}
                     />
                 </Switch>
             </Router>
