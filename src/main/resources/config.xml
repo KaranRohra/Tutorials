@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <!-- Setter injection -->
+    <bean id="setter-injection" class="com.example.demo.User">
+        <property name="name" value="Karan" />
+        <property name="email" value="rohrakaran38@gmail.com" />
+    </bean>
+
+    <!-- Constructor injection -->
+    <bean id="constructor-injection" class="com.example.demo.User">
+        <constructor-arg index="1" type="java.lang.String" value="Anisha" />
+        <constructor-arg index="0" type="java.lang.String" value="ani.dhameja@gmail.com" />
+    </bean>
+</beans>
