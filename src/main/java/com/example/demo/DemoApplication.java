@@ -8,7 +8,8 @@ public class DemoApplication {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
 		try (context) {
 			// User user = (User) context.getBean("setter-injection");
-			User user = (User) context.getBean("constructor-injection");
+			 User user = (User) context.getBean("constructor-injection");
+			//User user = (User) context.getBean("object-injection");
 			System.out.println(user);
 		}
 	}

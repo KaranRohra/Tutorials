@@ -10,7 +10,21 @@
 
     <!-- Constructor injection -->
     <bean id="constructor-injection" class="com.example.demo.User">
-        <constructor-arg index="1" type="java.lang.String" value="Anisha" />
-        <constructor-arg index="0" type="java.lang.String" value="ani.dhameja@gmail.com" />
+        <constructor-arg index="1" type="java.lang.String" value="Vashu" />
+        <constructor-arg index="0" type="java.lang.String" value="vashu966@gmail.com" />
+        <constructor-arg index="2" type="com.example.demo.Laptop" ref="laptop" />
     </bean>
+
+    <!-- Object Injection -->
+    <bean id="laptop" class="com.example.demo.Laptop">
+        <property name="brand" value="Dell" />
+        <property name="ram" value="2"/>
+        <property name="rom" value="128"/>
+    </bean>
+    <bean id="object-injection" class="com.example.demo.User">
+        <property name="laptop" ref="laptop" />
+        <property name="name" value="Purab" />
+        <property name="email" value="purabrohra@gmail.com" />
+    </bean>
+
 </beans>
