@@ -6,6 +6,14 @@
     <bean id="setter-injection" class="com.example.demo.User">
         <property name="name" value="Karan" />
         <property name="email" value="rohrakaran38@gmail.com" />
+        <property name="laptop">
+            <!-- Inner Bean -->
+            <bean class="com.example.demo.Laptop">
+                <property name="brand" value="Apple" />
+                <property name="ram" value="2"/>
+                <property name="rom" value="128"/>
+            </bean>
+        </property>
     </bean>
 
     <!-- Constructor injection -->
